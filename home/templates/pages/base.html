@@ -1,26 +1,105 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   {% load static %}
-   <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
-   <title>{% block title %}{% endblock %}</title>
+
+    {% load static %}
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet"  href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+
+    <title>{% block title %}{% endblock %}</title>
+
+    <style>
+
+        html, body {
+
+        height: 100%;
+
+        background-color: #f6f6f6;
+
+        }
+
+    </style>
+
 </head>
+
 <body>
-   <div class="container-fluid">
-       <div class="row">
-           <div class="col-sm-2">
-               <center><img src="{% static 'bruno.png' %}" class="responsive-img" style="max-height:150px"/></center>
-           </div>
-           <div class="col-sm-10">
-               <center><h1>Blog Làm từ Python Django</h1></center>
-           </div>
-       </div>
-   </div>
-   {% block content %}
-  
-   {% endblock %}
+
+    <div class="container-fluid" style="min-height:95%">
+
+        <div class="row">
+
+            <div class="col-sm-2">
+
+                <center><img src="{% static 'bruno.png' %}" class="responsive-img" style="max-height:150px"/></center>  
+
+            </div>
+
+            <div class="col-sm-10">
+
+                <center><h1>Blog của Pea</h1></center>
+
+            </div>
+
+        </div>
+
+        <br/>
+
+        <div class="row">
+
+            <div class="col-sm-2">
+
+                <div class="bs-sliderbar" style="background-color:#fff;">
+
+                    <ul class="nav flex-column">
+
+                        <li><a href="/"> Thông tin cá nhân</a></li>
+
+                        <li><a href="/blog"> Bài viết</a></li>
+
+                        <li><a href="/contact"> Liên hệ</a></li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="col-sm-10">
+
+                <div class="container-fluid">
+
+                    {% block content %}
+
+ 
+
+                    {% endblock %}   
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+
+        <div class="container-fluid">
+
+            <center><a href="https://www.facebook.com/html.html.2dasd/"target="_blank"> Facebook | </a><a href="https://www.instagram.com/pea_2201/"target="_blank"> Instagram |</a><a href="https://open.spotify.com/artist/0wBHW81onV2Yi04HXVCT0f?si=EMF936HfSrWduIECAOAtHw"target="_blank"> Spotify </a></center>
+
+        </div>
+
+    </footer>
+
 </body>
+
 </html>
